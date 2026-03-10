@@ -23,16 +23,16 @@
           <a href="{{ '/' | url }}#contact" class="py-2 text-white hover:text-accent">Contact</a>
         </li>
         <li>
-          <a href="{{ '/' | url }}#reservations" class="py-2 text-white hover:text-accent">Reservations</a>
+          <a href="https://order.online/store/27565765?pickup=true&redirected=true" target="_blank" rel="noopener noreferrer" class="py-2 text-white hover:text-accent">Order Now</a>
         </li>
       </ul>
     </div>
 
-    <!-- Right side: Order Now + mobile toggle -->
+    <!-- Right side: Reserve Now + mobile toggle -->
     <div class="flex items-center gap-3 shrink-0">
-      <a href="https://order.online/store/27565765?pickup=true&redirected=true" target="_blank" rel="noopener noreferrer"
+      <a href="{{ '/' | url }}#reservations"
         class="font-cormorant uppercase hidden md:inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-transparent border border-white hover:bg-accent hover:text-dark-bg hover:border-accent focus:outline-none transition-colors duration-300">
-        Order Now
+        Reserve Now
       </a>
       <button data-collapse-toggle="navbar-mobile" type="button"
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
@@ -53,11 +53,11 @@
       <li><a href="{{ '/menu' | url }}" class="block py-2 px-3 text-white hover:bg-white/10">Menu</a></li>
       <li><a href="{{ '/gallery' | url }}" class="block py-2 px-3 text-white hover:bg-white/10">Gallery</a></li>
       <li><a href="{{ '/' | url }}#contact" class="block py-2 px-3 text-white hover:bg-white/10">Contact</a></li>
-      <li><a href="{{ '/' | url }}#reservations" class="block py-2 px-3 text-white hover:bg-white/10">Reservations</a></li>
+      <li><a href="https://order.online/store/27565765?pickup=true&redirected=true" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-white hover:bg-white/10">Order Now</a></li>
       <li class="mt-2">
-        <a href="https://order.online/store/27565765?pickup=true&redirected=true" target="_blank" rel="noopener noreferrer"
+        <a href="{{ '/' | url }}#reservations"
           class="block py-2 px-3 text-white bg-transparent border border-white hover:bg-accent hover:text-dark-bg hover:border-accent text-center font-cormorant uppercase tracking-widest transition-colors duration-300">
-          Order Now
+          Reserve Now
         </a>
       </li>
     </ul>
