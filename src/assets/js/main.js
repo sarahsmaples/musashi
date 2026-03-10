@@ -23,6 +23,27 @@ if (animatedEls.length) {
   animatedEls.forEach(el => observer.observe(el));
 }
 
+// Mobile menu toggle
+const menuToggle = document.querySelector('[data-collapse-toggle="navbar-mobile"]');
+const mobileMenu = document.getElementById('navbar-mobile');
+if (menuToggle && mobileMenu) {
+  mobileMenu.style.maxHeight = '0';
+  mobileMenu.style.overflow = 'hidden';
+  mobileMenu.style.transition = 'max-height 0.4s ease';
+
+  const closeMenu = () => { mobileMenu.style.maxHeight = '0'; };
+  const openMenu  = () => { mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px'; };
+  let isOpen = false;
+
+  menuToggle.addEventListener('click', () => {
+    isOpen = !isOpen;
+    isOpen ? openMenu() : closeMenu();
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => { isOpen = false; closeMenu(); });
+  });
+}
+
 // Scroll-aware nav background
 const nav = document.getElementById('main-nav');
 if (nav) {
