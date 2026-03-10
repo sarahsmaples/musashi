@@ -1,4 +1,4 @@
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white md:bg-transparent border-gray-200 dark:bg-dark-bg md:dark:bg-transparent">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-dark-bg md:bg-transparent border-gray-200">
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
 
     <!-- Logo (far left) -->
@@ -11,19 +11,19 @@
     <div class="hidden md:flex flex-1 justify-center" id="navbar-default">
       <ul class="font-cormorant uppercase font-medium flex flex-row space-x-8">
         <li>
-          <a href="{{ '/' | url }}#about" class="py-2 text-gray-900 hover:text-accent dark:text-white md:dark:hover:text-accent">About</a>
+          <a href="{{ '/' | url }}#about" class="py-2 text-white hover:text-accent">About</a>
         </li>
         <li>
-          <a href="{{ '/menu' | url }}" class="py-2 text-gray-900 hover:text-accent dark:text-white md:dark:hover:text-accent">Menu</a>
+          <a href="{{ '/menu' | url }}" class="py-2 text-white hover:text-accent">Menu</a>
         </li>
         <li>
-          <a href="{{ '/gallery' | url }}" class="py-2 text-gray-900 hover:text-accent dark:text-white md:dark:hover:text-accent">Gallery</a>
+          <a href="{{ '/gallery' | url }}" class="py-2 text-white hover:text-accent">Gallery</a>
         </li>
         <li>
-          <a href="{{ '/' | url }}#contact" class="py-2 text-gray-900 hover:text-accent dark:text-white md:dark:hover:text-accent">Contact</a>
+          <a href="{{ '/' | url }}#contact" class="py-2 text-white hover:text-accent">Contact</a>
         </li>
         <li>
-          <a href="{{ '/' | url }}#reservations" class="py-2 text-gray-900 hover:text-accent dark:text-white md:dark:hover:text-accent">Reservations</a>
+          <a href="{{ '/' | url }}#reservations" class="py-2 text-white hover:text-accent">Reservations</a>
         </li>
       </ul>
     </div>
@@ -35,7 +35,7 @@
         Order Now
       </a>
       <button data-collapse-toggle="navbar-mobile" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
         aria-controls="navbar-mobile" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -48,12 +48,12 @@
 
   <!-- Mobile menu -->
   <div class="w-full" id="navbar-mobile">
-    <ul class="font-cormorant uppercase font-medium flex flex-col p-4 border-t border-gray-100 dark:border-gray-700 dark:bg-dark-bg">
-      <li><a href="{{ '/' | url }}#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">About</a></li>
-      <li><a href="{{ '/menu' | url }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Menu</a></li>
-      <li><a href="{{ '/gallery' | url }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Gallery</a></li>
-      <li><a href="{{ '/' | url }}#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Contact</a></li>
-      <li><a href="{{ '/' | url }}#reservations" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Reservations</a></li>
+    <ul class="font-cormorant uppercase font-medium flex flex-col p-4 border-t border-white/10 bg-dark-bg">
+      <li><a href="{{ '/' | url }}#about" class="block py-2 px-3 text-white hover:bg-white/10">About</a></li>
+      <li><a href="{{ '/menu' | url }}" class="block py-2 px-3 text-white hover:bg-white/10">Menu</a></li>
+      <li><a href="{{ '/gallery' | url }}" class="block py-2 px-3 text-white hover:bg-white/10">Gallery</a></li>
+      <li><a href="{{ '/' | url }}#contact" class="block py-2 px-3 text-white hover:bg-white/10">Contact</a></li>
+      <li><a href="{{ '/' | url }}#reservations" class="block py-2 px-3 text-white hover:bg-white/10">Reservations</a></li>
       <li class="mt-2">
         <a href="https://order.online/store/27565765?pickup=true&redirected=true" target="_blank" rel="noopener noreferrer"
           class="block py-2 px-3 text-white bg-transparent border border-white hover:bg-accent hover:text-dark-bg hover:border-accent text-center font-cormorant uppercase tracking-widest transition-colors duration-300">
