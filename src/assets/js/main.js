@@ -9,6 +9,20 @@ if (slides.length > 1) {
   }, 3000);
 }
 
+// Scroll-triggered animations
+const animatedEls = document.querySelectorAll('[data-animate]');
+if (animatedEls.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  animatedEls.forEach(el => observer.observe(el));
+}
+
 // Scroll-aware nav background
 const nav = document.getElementById('main-nav');
 if (nav) {
