@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("dist/css/styles.css");
 
   return {
+    pathPrefix: "/musashi/",
     dir: {
       input: "src",
       output: "dist",
