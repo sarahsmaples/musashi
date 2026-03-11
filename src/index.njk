@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <p class="max-w-xl mx-auto lg:mx-0 mb-8 text-xl text-gray-400 font-light">
           Fresh fish flown in regularly. Traditional Japanese craftsmanship. An upscale dining destination in the heart of Frisco — setting a new standard north of Dallas.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <div class="hidden sm:flex flex-row gap-4 justify-center lg:justify-start">
           <a href="{{ '/' | url }}#reservations"
             class="font-cormorant uppercase tracking-widest inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-dark-bg bg-accent hover:bg-accent/90 focus:outline-none transition-colors duration-300">
             Reserve a Table
@@ -55,6 +55,17 @@ document.addEventListener("DOMContentLoaded", async () => {
           </a>
         </div>
       </div>
+    </div>
+    <!-- Mobile CTAs: pinned near bottom of hero -->
+    <div class="absolute bottom-10 inset-x-0 flex sm:hidden flex-col gap-4 px-4 items-center">
+      <a href="{{ '/' | url }}#reservations"
+        class="font-cormorant uppercase tracking-widest inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-dark-bg bg-accent hover:bg-accent/90 focus:outline-none transition-colors duration-300 w-full max-w-xs">
+        Reserve a Table
+      </a>
+      <a href="{{ '/menu' | url }}"
+        class="font-cormorant uppercase tracking-widest inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white border border-white hover:bg-accent hover:text-dark-bg hover:border-accent focus:outline-none transition-colors duration-300 w-full max-w-xs">
+        View Our Menu
+      </a>
     </div>
   </section>
 

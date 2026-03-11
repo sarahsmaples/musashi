@@ -532,6 +532,13 @@ video {
 .inset-0 {
   inset: 0px;
 }
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+.bottom-10 {
+  bottom: 2.5rem;
+}
 .left-0 {
   left: 0px;
 }
@@ -655,6 +662,9 @@ video {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-xs {
+  max-width: 20rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1081,8 +1091,8 @@ video {
     display: flex;
   }
 
-  .sm\:flex-row {
-    flex-direction: row;
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:items-center {
