@@ -38,8 +38,11 @@
     </div>
     <hr class="border-gray-800"/>
     <div class="pt-6 sm:flex sm:items-center sm:justify-between">
-      <span class="block text-sm text-gray-500 sm:text-center">© {{ global.currentYear }} {{ client.name }}. All Rights Reserved.</span>
-      <div class="flex items-center gap-4 mt-2 sm:mt-0">
+      <div class="mb-2 sm:mb-0">
+        <span class="block text-sm text-gray-500">© {{ global.currentYear }} {{ client.name }}. All Rights Reserved.</span>
+        <a href="https://88restaurants.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-300">Restaurant Website Designed by 88 Restaurants</a>
+      </div>
+      <div class="flex items-center gap-4">
         <a href="{{ '/terms' | url }}" class="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-300">Terms &amp; Conditions</a>
         <a href="{{ '/privacy' | url }}" class="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-300">Privacy Policy</a>
         <p class="text-xs text-gray-600">Premium Sushi &amp; Japanese Cuisine — Frisco, TX</p>
