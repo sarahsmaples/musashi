@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   <!-- Hero -->
   <section id="hero" class="relative overflow-hidden min-h-screen" style="min-height: 100vh;">
     <!-- Intro video -->
-    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="{{ '/assets/images/hero-mobile.jpg' | url }}">
       <source src="{{ '/assets/videos/hero.mp4' | url }}" type="video/mp4">
     </video>
     <!-- Dark overlay -->
@@ -220,6 +220,42 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Menus -->
+  <section class="bg-stone-50 border-t border-stone-200">
+    <div class="max-w-screen-xl mx-auto px-4 py-16 md:py-24">
+      <div class="text-center mb-12">
+        <p class="font-cormorant uppercase tracking-widest text-base text-accent mb-3">Explore</p>
+        <h2 class="text-5xl md:text-6xl text-gray-900">Our Menus</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
+        <a href="{{ '/menu/sushi-bar/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
+          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Experience</p>
+          <h3 class="text-3xl text-gray-900 mb-4">Sushi Bar</h3>
+          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Omakase-style selections crafted at the bar. Chef's choice of the freshest cuts, daily.</p>
+          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+        </a>
+        <a href="{{ '/menu/day/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
+          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Afternoon</p>
+          <h3 class="text-3xl text-gray-900 mb-4">Day Menu</h3>
+          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Lighter bites and lunch offerings — sushi, small plates, and Japanese tapas.</p>
+          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+        </a>
+        <a href="{{ '/menu/night/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
+          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Evening</p>
+          <h3 class="text-3xl text-gray-900 mb-4">Night Menu</h3>
+          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">An elevated dinner experience with premium rolls, izakaya, and multi-course options.</p>
+          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+        </a>
+        <a href="{{ '/menu/drinks/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
+          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Beverages</p>
+          <h3 class="text-3xl text-gray-900 mb-4">Drink Menu</h3>
+          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Japanese sake, whisky, craft cocktails, and a curated wine list to complement every dish.</p>
+          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+        </a>
       </div>
     </div>
   </section>
