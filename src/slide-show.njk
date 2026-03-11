@@ -1,7 +1,7 @@
 ---
 title: Home
 description: "Musashi brings premium sushi and Japanese cuisine to Frisco, TX. Fresh fish flown in regularly, an upscale atmosphere, and an unforgettable dining experience just north of Dallas. Reserve your table today."
-permalink: /index-intro-video/
+permalink: /slide-show/
 ---
 
 {% extends "layouts/base.njk" %}
@@ -10,10 +10,14 @@ permalink: /index-intro-video/
 
   <!-- Hero -->
   <section id="hero" class="relative overflow-hidden min-h-screen" style="min-height: 100vh;">
-    <!-- Intro video -->
-    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
-      <source src="{{ '/assets/videos/hero.mp4' | url }}" type="video/mp4">
-    </video>
+    <!-- Slideshow -->
+    <div id="hero-slides" class="absolute inset-0">
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000" style="background-image: url('{{ '/assets/images/hero-1.jpg' | url }}'); background-size: cover; background-position: center;"></div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('{{ '/assets/images/hero-2.JPG' | url }}'); background-size: cover; background-position: center;"></div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('{{ '/assets/images/hero-3.jpg' | url }}'); background-size: cover; background-position: center;"></div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('{{ '/assets/images/hero-4.jpg' | url }}'); background-size: cover; background-position: center;"></div>
+      <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('{{ '/assets/images/hero-5.jpg' | url }}'); background-size: cover; background-position: center;"></div>
+    </div>
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-dark-bg opacity-20"></div>
     <div class="relative max-w-screen-xl px-4 py-24 mx-auto lg:py-36 lg:grid lg:grid-cols-12 lg:gap-8 items-center">
@@ -26,7 +30,7 @@ permalink: /index-intro-video/
           Fresh fish flown in regularly. Traditional Japanese craftsmanship. An upscale dining destination in the heart of Frisco — setting a new standard north of Dallas.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <a href="/index-intro-video/#reservations"
+          <a href="#reservations"
             class="font-cormorant uppercase tracking-widest inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-dark-bg bg-accent hover:bg-accent/90 focus:outline-none transition-colors duration-300">
             Reserve a Table
           </a>
@@ -80,6 +84,71 @@ permalink: /index-intro-video/
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Gallery Strip -->
+  <section class="gallery-strip-section relative overflow-hidden bg-dark-bg" style="height: 220px;">
+    <div class="gallery-strip-track" id="galleryStripTrack">
+      {% set stripImages = [
+        "g23.jpeg","g7.jpg","g12.jpg","g27.jpg","g36.jpg",
+        "g21.jpeg","g38.jpg","g44.jpg","g16.jpg","g6.jpg",
+        "g31.jpg","g18.JPG","g47.jpg","g24.jpeg","g45.jpg",
+        "g22.jpeg","g35.jpg","g13.jpg","g3.jpeg","g26.jpg",
+        "g5.jpg","g37.jpg","g10.jpg","g34.jpg","g1.jpg"
+      ] %}
+      {% for img in stripImages %}
+        <img src="{{ ('/assets/images/gallery/' + img) | url }}" alt="" loading="lazy">
+      {% endfor %}
+      {# Duplicate for seamless loop #}
+      {% for img in stripImages %}
+        <img src="{{ ('/assets/images/gallery/' + img) | url }}" alt="" loading="lazy" aria-hidden="true">
+      {% endfor %}
+    </div>
+    <!-- Hover overlay -->
+    <div class="gallery-strip-overlay">
+      <a href="{{ '/gallery' | url }}" class="font-cormorant uppercase tracking-widest text-lg text-white border border-white px-8 py-3 hover:bg-accent hover:text-dark-bg hover:border-accent transition-colors duration-300">
+        View Gallery
+      </a>
+    </div>
+    <style>
+      .gallery-strip-track {
+        display: flex;
+        gap: 6px;
+        height: 100%;
+        width: max-content;
+        animation: gallery-scroll 120s linear infinite;
+      }
+      .gallery-strip-track img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0;
+      }
+      @keyframes gallery-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+      .gallery-strip-section:hover .gallery-strip-track {
+        animation-play-state: paused;
+      }
+      .gallery-strip-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: background 0.3s ease, opacity 0.3s ease;
+        pointer-events: none;
+      }
+      .gallery-strip-section:hover .gallery-strip-overlay {
+        background: rgba(0,0,0,0.55);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
   </section>
 
   <!-- Hours -->
@@ -176,18 +245,17 @@ permalink: /index-intro-video/
           </div>
           <!-- Contact -->
           <div>
-            <h4 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-3">Contact</h4>
+            <h4 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-3">Phone</h4>
             <div class="text-base text-gray-400 font-light space-y-2">
               <p><a href="tel:+12144077590" class="hover:text-white transition-colors duration-300">(214) 407-7590</a></p>
-              <p><a href="mailto:info@musashirestaurants.com" class="hover:text-white transition-colors duration-300">info@musashirestaurants.com</a></p>
             </div>
           </div>
           <!-- Socials -->
           <div>
             <h4 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-3">Follow Us</h4>
             <div class="text-base text-gray-400 font-light space-y-2">
-              <p><a href="https://www.facebook.com/musashidallas" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300">Facebook</a></p>
-              <p><a href="https://www.instagram.com/musashidallas/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300">Instagram</a></p>
+              <p><a href="https://www.facebook.com/musashidallas" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300"><i class="bi bi-facebook"></i> Facebook</a></p>
+              <p><a href="https://www.instagram.com/musashidallas/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300"><i class="bi bi-instagram"></i> Instagram</a></p>
             </div>
           </div>
         </div>
