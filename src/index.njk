@@ -116,11 +116,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   <section class="relative overflow-hidden border-t border-gray-800" style="background-image: url('{{ '/assets/images/hours-bg.jpg' | url }}'); background-size: cover; background-position: center;">
     <div class="absolute inset-0 bg-dark-bg opacity-70"></div>
     <div class="relative max-w-screen-xl px-4 py-16 mx-auto md:py-24">
-      <div class="grid md:grid-cols-3 gap-10 max-w-3xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-10 mx-auto" style="max-width: 68rem;">
 
         <!-- Lunch -->
         <div data-animate="fade-up" class="text-center">
-          <h2 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-4">Lunch Hours</h2>
+          <h2 class="font-cormorant uppercase tracking-widest text-4xl text-accent mb-4">Lunch Hours</h2>
           <div class="text-base text-gray-300 font-light space-y-1">
             <p class="text-white font-normal">Mon – Thur</p>
             <p>11:00 am – 2:30 pm</p>
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <!-- Dinner -->
         <div data-animate="fade-up" style="--animate-delay: 150ms" class="text-center">
-          <h2 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-4">Dinner Hours</h2>
+          <h2 class="font-cormorant uppercase tracking-widest text-4xl text-accent mb-4">Dinner Hours</h2>
           <div class="text-base text-gray-300 font-light space-y-3">
             <div>
               <p class="text-white font-normal">Mon – Thur</p>
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <!-- Happy Hour -->
         <div data-animate="fade-up" style="--animate-delay: 300ms" class="text-center">
-          <h2 class="font-cormorant uppercase tracking-widest text-2xl text-accent mb-4">Happy Hour</h2>
+          <h2 class="font-cormorant uppercase tracking-widest text-4xl text-accent mb-4">Happy Hour</h2>
           <div class="text-base text-gray-300 font-light space-y-1">
             <p class="text-white font-normal">Mon – Fri</p>
             <p>4:00 pm – 6:00 pm</p>
@@ -168,28 +168,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
         <a href="{{ '/menu/sushi-bar/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
-          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Experience</p>
-          <h3 class="text-3xl text-gray-900 mb-4">Sushi Bar</h3>
-          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Omakase-style selections crafted at the bar. Chef's choice of the freshest cuts, daily.</p>
-          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+          <p class="font-cormorant uppercase tracking-widest text-base text-accent mb-4">Experience</p>
+          <h3 class="text-5xl text-gray-900 mb-4">Sushi Bar</h3>
+          <p class="text-gray-500 font-light text-lg leading-relaxed mb-6">Omakase-style selections crafted at the bar. Chef's choice of the freshest cuts, daily.</p>
+          <span class="font-cormorant uppercase tracking-widest text-base text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
         </a>
         <a href="{{ '/menu/day/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
-          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Afternoon</p>
-          <h3 class="text-3xl text-gray-900 mb-4">Day Menu</h3>
-          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Lighter bites and lunch offerings — sushi, small plates, and Japanese tapas.</p>
-          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+          <p class="font-cormorant uppercase tracking-widest text-base text-accent mb-4">Afternoon</p>
+          <h3 class="text-5xl text-gray-900 mb-4">Day Menu</h3>
+          <p class="text-gray-500 font-light text-lg leading-relaxed mb-6">Lighter bites and lunch offerings — sushi, small plates, and Japanese tapas.</p>
+          <span class="font-cormorant uppercase tracking-widest text-base text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
         </a>
         <a href="{{ '/menu/night/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
-          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Evening</p>
-          <h3 class="text-3xl text-gray-900 mb-4">Night Menu</h3>
-          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">An elevated dinner experience with premium rolls, izakaya, and multi-course options.</p>
-          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+          <p class="font-cormorant uppercase tracking-widest text-base text-accent mb-4">Evening</p>
+          <h3 class="text-5xl text-gray-900 mb-4">Night Menu</h3>
+          <p class="text-gray-500 font-light text-lg leading-relaxed mb-6">An elevated dinner experience with premium rolls, izakaya, and multi-course options.</p>
+          <span class="font-cormorant uppercase tracking-widest text-base text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
         </a>
         <a href="{{ '/menu/drinks/' | url }}" class="group bg-stone-50 hover:bg-accent/10 transition-colors duration-300 flex flex-col items-center text-center px-8 py-12">
-          <p class="font-cormorant uppercase tracking-widest text-xs text-accent mb-4">Beverages</p>
-          <h3 class="text-3xl text-gray-900 mb-4">Drink Menu</h3>
-          <p class="text-gray-500 font-light text-sm leading-relaxed mb-6">Japanese sake, whisky, craft cocktails, and a curated wine list to complement every dish.</p>
-          <span class="font-cormorant uppercase tracking-widest text-xs text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
+          <p class="font-cormorant uppercase tracking-widest text-base text-accent mb-4">Beverages</p>
+          <h3 class="text-5xl text-gray-900 mb-4">Drink Menu</h3>
+          <p class="text-gray-500 font-light text-lg leading-relaxed mb-6">Japanese sake, whisky, craft cocktails, and a curated wine list to complement every dish.</p>
+          <span class="font-cormorant uppercase tracking-widest text-base text-accent group-hover:text-dark-bg transition-colors duration-300">View Menu →</span>
         </a>
       </div>
     </div>
