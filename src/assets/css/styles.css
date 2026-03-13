@@ -983,6 +983,10 @@ video {
 .tracking-widest {
   letter-spacing: 0.1em;
 }
+.text-\[\#7a6830\] {
+  --tw-text-opacity: 1;
+  color: rgb(122 104 48 / var(--tw-text-opacity));
+}
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(204 188 137 / var(--tw-text-opacity));
